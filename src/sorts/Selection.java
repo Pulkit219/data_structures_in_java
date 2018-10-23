@@ -1,5 +1,5 @@
 package sorts;
-
+//selection sort is unstable sort and lesser than swaps than bubble
 public class Selection {
 
 	public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Selection {
 		for (i = 0; i < list.length-1; i++) {
 			minValue = list[i];
 			minIndex = i;
-			//we store init index AND VALUE of outer loop and then compare each element in array with the help of inner loop
+			//we store init index AND VALUE of outer loop, assume as lowest value and then compare each element in array with the help of inner loop
 			for (j = i; j < list.length; j++) {
 				if (list[j] < minValue) {
 					minValue = list[j];
@@ -59,5 +59,30 @@ public class Selection {
 		
 		return list;
 	}
+	
+	// sort strings
+//	public static int[] selectionSortStrings (int[] list) {
+//		int i, j, minValue, minIndex, temp = 0;
+//		for (i = 0; i < list.length-1; i++) {
+//			minValue = list[i];
+//			minIndex = i;
+//			//we store init index AND VALUE of outer loop and then compare each element in array with the help of inner loop
+//			for (j = i; j < list.length; j++) {
+//				if (list[j].compareTo(minValue)<0) {
+//					minValue = list[j];
+//					minIndex = j;
+//				}
+//			}
+//			//once we see that we find another smaller element than init outer loop ith element, we swap
+//			//so lowest element comes in the beginning and that init element will go to last index.
+//			if (minValue < list[i]) {
+//				temp = list[i];
+//				list[i] = list[minIndex];
+//				list[minIndex] = temp;
+//			}
+//		}
+//		
+//		return list;
+//	}
 
 }

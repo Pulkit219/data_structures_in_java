@@ -1,13 +1,13 @@
 package sorts;
-
+//bubble sort is stable sort and of ocurse n^2
 public class Bubble {
 
 	public static void main(String[] args) {
 		
 		int[] intArray = { 20, 35, -15, 7, 55, 1, -22 };
-//		bubbleSort(intArray);
-		bubbleSortDescending(intArray);
-		for (int i = 0; i < intArray.length-1; i++) {
+		bubbleSort(intArray);
+//		bubbleSortDescending(intArray);
+		for (int i = 0; i < intArray.length; i++) {
 			System.out.print(" " + intArray[i]);
 		}
 		
