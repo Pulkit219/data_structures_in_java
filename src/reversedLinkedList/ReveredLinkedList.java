@@ -70,7 +70,9 @@ public class ReveredLinkedList {
 		//So now head is pointing to last element and of course if we traverse from last element to the first it's reversed!!
 		System.out.println("After reversing");
 		list.printList(head);
- 
+		System.out.println("back to original");
+		head=list.reverseLinkedList(head);
+		list.printList(head);
 	}
  
 }
