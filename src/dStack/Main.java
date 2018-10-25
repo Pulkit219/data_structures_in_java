@@ -13,10 +13,15 @@ public class Main {
 		System.out.println();
 	
 		st.push(4);
-		st.push(4);
-		st.push(4);
-		st.push(4);
         st.show();
+
+        
+        System.out.println();
+        st.pop();
+        st.pop();
+        st.pop();
+        st.show();
+//        System.out.println(st.size());
 
 	}
 

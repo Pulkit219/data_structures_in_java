@@ -27,6 +27,7 @@ private int stack[], top=0,size;
 		System.arraycopy(stack, 0, newStack,0 , size);
 		stack=newStack;
 		size*=2;
+		
 	}
 
 	public void pop() {
@@ -35,8 +36,20 @@ private int stack[], top=0,size;
 		;}
 		stack[top-1]=0;
 		top--;
+		shrink();
 	}
 	
+	private void shrink() {
+		if(size()<=(this.size)/4) {
+			int[] newStack=new int[(this.size/2)];
+			System.arraycopy(stack, 0, newStack,0 , size());
+			stack=newStack;
+			size/=2;			
+		}
+		else return;
+		
+	}
+
 	//RETURN LAST ADDED ELEMENT TO STACK
 	public int peek() {
 		return stack[top-1];
