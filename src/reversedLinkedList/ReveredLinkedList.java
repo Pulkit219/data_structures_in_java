@@ -49,11 +49,11 @@ public class ReveredLinkedList {
 		{
 			nextNode=currentNode.next;//save the next link in next variable so we can traverse the list further
 			currentNode.next=previousNode;//reversing the pointer so next will point to back
-			previousNode=currentNode;//saving current in prev so in loop when we get to next node, next node can point to this one as prev one
-			currentNode=nextNode;//finally setting the current variable to next so loop keeps moving on
+			previousNode=currentNode;//saving current in prevNode so in loop when we get to next node, next node can point to this one as prev one
+			currentNode=nextNode;//finally setting the current Node to next so loop keeps moving on
 		}
-		currentNode=previousNode;
-		return currentNode;
+		currentNode=previousNode;//here while loop stops because current node becomes null so we set it to previous node means the last node
+		return currentNode;// returning this last node so it can be captured in a variable or can be set as head because we're  reversing the list after all
 	}
  
 	public static void main(String[] args) {
@@ -66,7 +66,7 @@ public class ReveredLinkedList {
 		    list.printList(head);
 		
 		//Reversing LinkedList
-		head=list.reverseLinkedList(head); // here reverseLinkedList function is returning the last element once while loop is over and then we set it as head by head =returned value
+		head=list.reverseLinkedList(head); // here function is taking in(head as noraml list) and outputs the last element once while loop is over and then we set it as head, so when last element is head, list reversed!!
 		//So now head is pointing to last element and of course if we traverse from last element to the first it's reversed!!
 		System.out.println("After reversing");
 		list.printList(head);
