@@ -21,7 +21,7 @@ public class Main {
         st.pop();
         st.pop();
         st.show();
-//        System.out.println(st.size());
+
 
 	}
 
