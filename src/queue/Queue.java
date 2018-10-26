@@ -29,7 +29,7 @@ public void enQueue(int data) {
 	  front=rear=0;	  
 	}
 	else {
-		rear=(rear+1)%que.length;	//we doing this instead of rear++ because this is circular queue implementation , this formula can reset rear to 0 and insert an element if front is >rear || it also works as rear++
+		rear=(rear+1)%que.length;//we doing this instead of rear++ because this is circular queue implementation , this formula can reset rear to 0 and insert an element if front is >rear || it also works as rear++
 	}
 	que[rear]=data;
 	numOfElements++;
@@ -38,6 +38,7 @@ public void enQueue(int data) {
 
 //deletion of element at front
 //when we perform delete operation here, we don't actually delete an element or make it 0, we just move our front pointer/index 1 step forward, so yes there is an empty space behind front selector
+//it will be overwritten by rear later if we keep adding elements.
 public void deQueue() {
 	if(Isempty()) {
 		System.out.println("already empty");
@@ -47,7 +48,7 @@ public void deQueue() {
 		front=rear=-1;
 	}
 	else {
-		front=(front+1)%que.length;;
+		front=(front+1)%que.length; //same formula here as well because we're dealing with circular queues
 	}
 
 }
@@ -68,4 +69,6 @@ public void show() {
 		System.out.print(" " + i);
 	}
 }
+
+
 }
